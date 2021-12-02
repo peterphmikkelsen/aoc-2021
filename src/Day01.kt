@@ -11,11 +11,10 @@ fun main() {
 
     fun part2(input: List<Int>): Int {
         var increased = 0
-        var currentSum = input[0] + input[1] + input[2]
-        for (i in 5 until input.size) {
-            val tempSum = input[i] + input[i-1] + input[i-2]
-            if (tempSum > currentSum) increased++
-            currentSum = tempSum
+        for (i in 3 until input.size) {
+            val currentSum = input[i] + input[i-1] + input[i-2]
+            val prevSum = input[i-1] + input[i-2] + input[i-3]
+            if (currentSum > prevSum) increased++
         }
         return increased
     }
