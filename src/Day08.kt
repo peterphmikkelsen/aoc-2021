@@ -57,10 +57,10 @@ fun main() {
     println(part2(input))
 }
 
-fun List<String>.findEight() = this.filter { it.length == 7 }.joinToString("")
-fun List<String>.findSeven() = this.filter { it.length == 3 }.joinToString("")
-fun List<String>.findFour() = this.filter { it.length == 4 }.joinToString("")
-fun List<String>.findOne() = this.filter { it.length == 2 }.joinToString("")
+fun List<String>.findEight() = this.find { it.length == 7 }!!
+fun List<String>.findSeven() = this.find { it.length == 3 }!!
+fun List<String>.findFour() = this.find { it.length == 4 }!!
+fun List<String>.findOne() = this.find { it.length == 2 }!!
 fun List<String>.findSix(): String {
     val one = this.findOne()
     val temp = this.filter { it.length == 6 }
