@@ -90,16 +90,6 @@ fun List<String>.findNine(): String {
     }
     return ""
 }
-fun List<String>.findZero(): String {
-    val six = this.findSix()
-    val nine = this.findNine()
-    val temp = this.filter { it.length == 6 }
-    for (str in temp) {
-        if (str == six || str == nine) continue
-        return str
-    }
-    return ""
-}
 fun List<String>.findTwo(): String {
     val one = this.findOne()
     val five = this.findFive()
