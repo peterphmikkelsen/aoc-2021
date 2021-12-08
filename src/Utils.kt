@@ -26,3 +26,25 @@ inline fun <T> MutableList<T>.mapInPlace(mutator: (T)->T) {
         }
     }
 }
+
+fun String.difference(other: String): String {
+    val longestString = if (this.length >= other.length) this else other
+    val shortestString = if (this.length < other.length) this else other
+    val sb = StringBuilder()
+    for (c in longestString) {
+        if (!shortestString.contains(c))
+            sb.append(c)
+    }
+    return sb.toString()
+}
+
+fun String.intersection(other: String): String {
+    val longestString = if (this.length >= other.length) this else other
+    val shortestString = if (this.length < other.length) this else other
+    val sb = StringBuilder()
+    for (c in longestString) {
+        if (shortestString.contains(c))
+            sb.append(c)
+    }
+    return sb.toString()
+}
