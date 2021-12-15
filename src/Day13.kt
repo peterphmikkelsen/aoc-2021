@@ -13,7 +13,7 @@ fun main() {
         return pointsAfterFold.size
     }
 
-    fun part2(input: List<String>): Int {
+    fun part2(input: List<String>) {
         val (points, folds) = input.formatInput()
         var pointsAfterFold = mutableSetOf<Pair<Int, Int>>()
         pointsAfterFold.addAll(points.toList())
@@ -27,7 +27,6 @@ fun main() {
         val data = mapOf<String, List<*>>("x" to xs, "y" to ys)
         val plot = letsPlot(data) + geomPoint(size = 10) { x = "x"; y = "y" }
         ggsave(plot + coordFixed(.99), "out.svg")
-        return -1
     }
 
 //    val testInput = readInput("Day12_test")
@@ -37,7 +36,7 @@ fun main() {
 
     val input = readInput("Day12")
     println(part1(input))
-    println(part2(input))
+    part2(input)
 }
 
 private fun List<String>.formatInput(): Pair<List<Pair<Int, Int>>, List<String>> {
