@@ -17,3 +17,8 @@ tasks {
         gradleVersion = "7.3"
     }
 }
+
+dependencies {
+    implementation("org.jetbrains.lets-plot:lets-plot-common:2.2.1")
+    implementation("org.jetbrains.lets-plot:lets-plot-kotlin-jvm:3.1.0")
+}
