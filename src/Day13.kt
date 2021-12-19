@@ -29,12 +29,12 @@ fun main() {
         ggsave(plot + coordFixed(.99), "out.svg")
     }
 
-//    val testInput = readInput("Day12_test")
+//    val testInput = readInput("Day13_test")
 //    check(part1(testInput) == 17)
 //    part2(testInput)
 //    check(part2(testInput) == 7)
 
-    val input = readInput("Day12")
+    val input = readInput("Day13")
     println(part1(input))
     part2(input)
 }
