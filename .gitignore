@@ -4,3 +4,4 @@ build
 src/**/*.txt
 bin
 lets-plot-images
+.DS_Store
